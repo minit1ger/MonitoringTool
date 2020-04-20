@@ -1,0 +1,113 @@
+body {
+  background-color: #fffcf7;
+  padding: 0px;
+  margin: 0;
+}
+h1, h2, pp, ul, li {
+  font-family: sans-serif;
+}
+
+/* H1 is used for the 
+        1. Monitoring Tool Header */
+h1 {
+  text-align: center;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none; 
+  margin: 0; 
+}
+ul.header {
+  background-color: maroon;
+  padding: 0px; 
+  box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.4);
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold; 
+  text-decoration: none; 
+  padding: 15px; 
+  display: inline-block;
+}
+
+ul.header li.AppName {
+  color: #FFF;
+  font-weight: bold;
+  padding: 15px; 
+  font-style: italic;
+  border-style: hidden solid hidden hidden;
+  border-width: 20px;
+  border-color: #fffcf7;
+}
+
+.content {
+  /* background-color: #FFF; */
+  padding: 15px; 
+}
+.content h2 {
+  padding: 0; 
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px; 
+}
+
+.content table {
+  border-collapse: collapse;
+  margin-left:auto; 
+  margin-right:auto; 
+  width: 80%;
+}
+.content th {
+  background-color: maroon;
+  color: white;
+}
+.content tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.systemEventsContent {
+  padding: 15px;
+}
+.systemEventsContent th {
+  text-align: left;
+  padding-left: 10px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+.systemEventsContent td {
+  padding-left: 10px; 
+  padding-top: 5px;
+}
+
+.systemEventsContent .columnBoolean {
+  width: 50px;
+}
+
+.systemEventsContent .columnDate {
+  width: 100px; 
+}
+
+.rowHeader {
+  width: 100px;
+}
+
+.active {
+  background-color: black;
+}
+
+.serverHealthDisplay {
+  padding: 15px;
+  width: 500px;
+}
+.serverHealthDropdown {
+  width: 500px;
+}
+
+#channelIcon {
+  text-align: center;
+  width: 25px;
+  border: 3px solid black;
+  padding: 3px;
+  margin: 20px; 
+}
