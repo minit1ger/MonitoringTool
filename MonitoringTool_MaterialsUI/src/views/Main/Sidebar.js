@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import SettingsSystemDaydream from '@material-ui/icons/SettingsSystemDaydream';
+import Computer from '@material-ui/icons/Computer';
+import Email from '@material-ui/icons/Email';
+import Waves from '@material-ui/icons/Waves';
+
+
 /* import PeopleIcon from '@material-ui/icons/People';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import TextFieldsIcon from '@material-ui/icons/TextFields';
@@ -49,42 +55,27 @@ const Sidebar = props => {
       title: 'Dashboard',
       href: '/dashboard',
       icon: <DashboardIcon />
-    }/* ,
-    {
-      title: 'Users',
-      href: '/users',
-      icon: <PeopleIcon />
     },
     {
-      title: 'Products',
-      href: '/products',
-      icon: <ShoppingBasketIcon />
+      title: 'SystemHealth',
+      href: '/systemhealth',
+      icon: <SettingsSystemDaydream /> 
     },
     {
-      title: 'Authentication',
-      href: '/sign-in',
-      icon: <LockOpenIcon />
+      title: 'ServerHealth',
+      href: '/serverhealth',
+      icon: <Computer /> 
     },
     {
-      title: 'Typography',
-      href: '/typography',
-      icon: <TextFieldsIcon />
+      title: 'PDRStatus',
+      href: '/pdrstatus',
+      icon: <Email />
     },
     {
-      title: 'Icons',
-      href: '/icons',
-      icon: <ImageIcon />
-    },
-    {
-      title: 'Account',
-      href: '/account',
-      icon: <AccountBoxIcon />
-    },
-    {
-      title: 'Settings',
-      href: '/settings',
-      icon: <SettingsIcon />
-    } */
+      title: 'XMidas',
+      href: '/xmidas',
+      icon: <Waves />
+    }
   ];
 
   return (
