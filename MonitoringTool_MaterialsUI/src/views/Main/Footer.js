@@ -6,7 +6,11 @@ import { Typography, Link } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    color: theme.palette.logo.main,
     padding: theme.spacing(4)
+  }, 
+  logo: {
+    color: theme.palette.logo.main,
   }
 }));
 
@@ -16,24 +20,21 @@ const Footer = props => {
   const classes = useStyles();
 
   return (
+    /* TODO: Warning validateDOMNesting: <p> cannot appear as a descendant of <p>
+             Not sure why this is appearing for <div> flag.
+    */
     <div
       {...rest}
       className={clsx(classes.root, className)}
     >
+      {/* Display Hello Kitty Logo */}
       <Typography variant="body1">
         &copy;{' '}
-        <Link
-          component="a"
-          href="https://devias.io/"
-          target="_blank"
-        >
-          Devias IO
-        </Link>
-        . 2019
+        A <Typography className={classes.logo} style={{display: 'inline-block'}}>HelloKitty</Typography> Production
+        . 2020
       </Typography>
       <Typography variant="caption">
-        Created with love for the environment. By designers and developers who
-        love to work together in offices!
+        Created in fear of catching COVID-19!
       </Typography>
     </div>
   );

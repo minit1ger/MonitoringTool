@@ -13,7 +13,8 @@ export default {
     contrastText: white,
     dark: colors.red[900],
     main: colors.red[600],
-    light: colors.red[400]
+    light: colors.red[400],
+    pale: colors.red[50]
   },
   secondary: {
     contrastText: white,
@@ -54,6 +55,14 @@ export default {
     default: '#F4F6F8',
     paper: white
   },
+  logo: {
+    main: colors.pink[400]
+  },
+  table: {
+    header:   colors.grey[200],
+    rowColor: colors.grey[100]
+  },
   icon: colors.blueGrey[600],
-  divider: colors.grey[200]
+  divider: colors.grey[200],
+
 };

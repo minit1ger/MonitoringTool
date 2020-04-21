@@ -7,14 +7,16 @@ import { useMediaQuery } from '@material-ui/core';
 import Sidebar from './views/Main/Sidebar';
 import Topbar from './views/Main/Topbar';
 import Footer from './views/Main/Footer';
+import color from 'material-ui-core/colors/amber';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 56,
     height: '100%',
+    background: theme.palette.background.default,
     [theme.breakpoints.up('sm')]: {
-      paddingTop: 64
+      paddingTop: 56
     }
   },
   shiftContent: {
@@ -47,12 +49,8 @@ const Main = props => {
   const shouldOpenSidebar = isDesktop ? true : openSidebar;
 
   return (
-    <div
-      className={clsx({
-        [classes.root]: true,
-        [classes.shiftContent]: isDesktop
-      })}
-    >
+    <div 
+      className={clsx({ [classes.root]: true, [classes.shiftContent]: isDesktop })}>
       <Topbar onSidebarOpen={handleSidebarOpen} />
       <Sidebar
         onClose={handleSidebarClose}
