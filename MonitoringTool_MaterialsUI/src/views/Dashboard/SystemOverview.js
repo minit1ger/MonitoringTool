@@ -2,6 +2,7 @@ import React          from 'react';
 import { makeStyles } from '@material-ui/styles';
 import PropTypes      from 'prop-types';
 import Paper          from '@material-ui/core/Paper';
+import { Typography, colors } from '@material-ui/core';
 import data           from '../../data/systemOverview.json'
 
 //Table Related Imports
@@ -33,10 +34,25 @@ const useStyles = makeStyles(theme => ({
     minWidth: 150,
   },
   head: {
-    backgroundColor: theme.palette.table.header
+    backgroundColor: theme.palette.table.header,
+    fontWeight: theme.typography.fontWeightBold,
+    fontsize: '16px',
+    padding: '4px 8px',
   }, 
   row: {
     backgroundColor: theme.palette.table.rowColor
+  },
+  cell: {
+      color: colors.blueGrey[800],
+      padding: '0px 8px',
+      justifyContent: 'flex-start',
+      textTransform: 'none',
+      letterSpacing: 0,
+      width: '100%',
+      fontWeight: theme.typography.fontWeightMedium
+   },
+  container: {
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
   }
 }));
 
@@ -73,36 +89,39 @@ const SystemOverview = props => {
         console.log( "Bad" );
 
         return <TableRow className={returnRowStyle( index )} key={data.name}>
-          <TableCell component="th" scope="row">{data.name}</TableCell>
-          <TableCell><font color="red">{data.systemOverview}</font></TableCell>
-          <TableCell>{data.recentFailures}</TableCell>
+          <TableCell component="th" scope="row"><Typography className={classes.cell}>{data.name}</Typography></TableCell>
+          <TableCell><Typography className={classes.cell}><font color="red">{data.systemOverview}</font></Typography></TableCell>
+          <TableCell><Typography className={classes.cell}>{data.recentFailures}</Typography></TableCell>
         </TableRow>
       } else {
 
         return <TableRow className={returnRowStyle( index )} key={data.name}>
-          <TableCell>{data.name}</TableCell>
-          <TableCell>{data.systemOverview}</TableCell>
-          <TableCell>{data.recentFailures}</TableCell>
+          <TableCell><Typography className={classes.cell}>{data.name}</Typography></TableCell>
+          <TableCell><Typography className={classes.cell}>{data.systemOverview}</Typography></TableCell>
+          <TableCell><Typography className={classes.cell}>{data.recentFailures}</Typography></TableCell>
         </TableRow>
       }
     });
 
     /** Returns  */
     return (
-      <TableContainer component={Paper}>
-        <Table className={classes.table} size="small" padding="none" aria-label="simple table">
-          <TableHead className={classes.head}>
-            <TableRow>
-              <TableCell> System Name </TableCell>
-              <TableCell> System Overview </TableCell>
-              <TableCell> Recent Failures </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            { systemArray }
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <div className={classes.container}>
+        <TableContainer component={Paper}>
+          <Table className={classes.table} size="small" padding="none" aria-label="simple table">
+            <TableHead className={classes.head}>
+              <TableRow>
+                <TableCell><Typography className={classes.head}> System Name </Typography></TableCell>
+                <TableCell><Typography className={classes.head}> System Overview </Typography></TableCell>
+                <TableCell><Typography className={classes.head}> Recent Failures </Typography></TableCell>
+                
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              { systemArray }
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     );
   
   // If data could not be processed, return Error. 

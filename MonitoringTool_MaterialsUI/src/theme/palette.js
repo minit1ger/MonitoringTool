@@ -1,6 +1,8 @@
 import { colors } from '@material-ui/core';
 
 const white = '#FFFFFF';
+const ivory = '#FFFFF0';
+const ghostWhite = '#FAF8FF';
 const black = '#000000';
 
 /*
@@ -52,7 +54,8 @@ export default {
     link: colors.blue[600]
   },
   background: {
-    default: '#F4F6F8',
+    //default: '#F4F6F8',
+    default: ghostWhite,
     paper: white
   },
   logo: {
