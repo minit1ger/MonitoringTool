@@ -2,13 +2,25 @@ import React          from 'react';
 import { makeStyles } from '@material-ui/styles';
 import PropTypes      from 'prop-types';
 import Paper          from '@material-ui/core/Paper';
-import { Typography, colors } from '@material-ui/core';
+import { Typography, colors, Card } from '@material-ui/core';
 import data           from '../../data/systemOverview.json'
 
 //Table Related Imports
-import { TableContainer, Table, TableBody, TableHead, TableRow, TableCell} from '@material-ui/core';
+import { 
+  TableContainer, 
+  Table, 
+  TableBody, 
+  TableHead,
+  TableRow, 
+  TableCell,
+
+  CardHeader,
+  CardContent,
+  Divider
+} from '@material-ui/core';
 
 import { spacing } from '@material-ui/system';
+import clsx from 'clsx';
 
 /**
  * TODO: Could not change the padding OTHER than setting it to NONE.  
@@ -41,6 +53,9 @@ const useStyles = makeStyles(theme => ({
   }, 
   row: {
     backgroundColor: theme.palette.table.rowColor
+  },
+  content: {
+    padding: 0
   },
   cell: {
       color: colors.blueGrey[800],
@@ -105,23 +120,34 @@ const SystemOverview = props => {
 
     /** Returns  */
     return (
-      <div className={classes.container}>
-        <TableContainer component={Paper}>
-          <Table className={classes.table} size="small" padding="none" aria-label="simple table">
-            <TableHead className={classes.head}>
-              <TableRow>
-                <TableCell><Typography className={classes.head}> System Name </Typography></TableCell>
-                <TableCell><Typography className={classes.head}> System Overview </Typography></TableCell>
-                <TableCell><Typography className={classes.head}> Recent Failures </Typography></TableCell>
-                
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              { systemArray }
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
+      <Card 
+        {...rest}
+        className={classes.container}
+      >
+        <CardHeader align="center"
+          title="System Overview"
+        />
+        <Divider />
+          <CardContent className={classes.content}>
+            <div >
+              <TableContainer component={Paper}>
+                <Table className={classes.table} size="small" padding="none" aria-label="simple table">
+                  <TableHead className={classes.head}>
+                    <TableRow>
+                      <TableCell><Typography className={classes.head}> System Name </Typography></TableCell>
+                      <TableCell><Typography className={classes.head}> System Overview </Typography></TableCell>
+                      <TableCell><Typography className={classes.head}> Recent Failures </Typography></TableCell>
+                      
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    { systemArray }
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          </CardContent>
+      </Card>
     );
   
   // If data could not be processed, return Error. 
