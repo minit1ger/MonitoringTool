@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/styles'
 import { Grid } from '@material-ui/core';
 
 import ServerFailureSummary from './ServerFailureSummary';
+import SanStatus from './SanStatus';
+import ServerHealthDropdown from './ServerHealthDropdown';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,6 +25,10 @@ const ServerHealth = () => {
       <Grid container spacing={3}>
 
         <Grid item xs={6}><ServerFailureSummary /></Grid>
+
+        <Grid item xs={6}><SanStatus /></Grid>
+
+        <Grid item xs={6}> <ServerHealthDropdown /> </Grid>
       </Grid>
     </div>
   )

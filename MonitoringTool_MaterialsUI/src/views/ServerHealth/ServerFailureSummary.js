@@ -4,6 +4,7 @@ import clsx from 'clsx';
 // Stylization Related Imports
 import { makeStyles, colors, Typography } from '@material-ui/styles';
 
+import { spacing } from '@material-ui/system'
 
 import { 
   //Table Related Imports
@@ -38,7 +39,8 @@ const useStyles = makeStyles(theme => ({
     padding: '4px 8px',
   }, 
   content: {
-    padding: 0
+    padding: 0,
+    marginBottom: 0
   },
 }));
 
