@@ -1,0 +1,51 @@
+[
+  {
+    "Date":         "April 20th",
+    "Deployments":  "12", 
+    "PDRs" :        "90", 
+    "dFailures" :   "0", 
+    "sFailure" :    "0" 
+  }, {
+    "Date":         "April 21th",
+    "Deployments":  "2", 
+    "PDRs" :        "23", 
+    "dFailures" :   "0", 
+    "sFailure" :    "0" 
+  }, {
+    "Date":         "April 22th",
+    "Deployments":  "32", 
+    "PDRs" :        "138", 
+    "dFailures" :   "0", 
+    "sFailure" :    "0" 
+  }, {
+    "Date":         "April 23th",
+    "Deployments":  "22", 
+    "PDRs" :        "381", 
+    "dFailures" :   "0", 
+    "sFailure" :    "0" 
+  }, {
+    "Date":         "April 24th",
+    "Deployments":  "24", 
+    "PDRs" :        "215", 
+    "dFailures" :   "0", 
+    "sFailure" :    "0" 
+  }, {
+    "Date":         "April 25th",
+    "Deployments":  "18", 
+    "PDRs" :        "115", 
+    "dFailures" :   "4", 
+    "sFailure" :    "1" 
+  }, {
+    "Date":         "April 26th",
+    "Deployments":  "20", 
+    "PDRs" :        "135", 
+    "dFailures" :   "0", 
+    "sFailure" :    "0" 
+  }, {
+    "Date":         "April 27th",
+    "Deployments":  "5",
+    "PDRs" :        "24", 
+    "dFailures" :   "1", 
+    "sFailure" :    "3" 
+  }
+]

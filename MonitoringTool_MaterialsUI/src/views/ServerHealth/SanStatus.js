@@ -90,7 +90,7 @@ const SystemOverview = props => {
         <CardContent className={classes.content}>
           <div>
             <TableContainer component={Paper}>
-              <Table className={classes.table} size="small" padding="none" aria-lable="simple table">
+              <Table className={classes.table} size="small" aria-lable="simple table">
                 <TableBody>
                   {returnString}
                 </TableBody>

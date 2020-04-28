@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+//TODO: Fix with of ServerHealth Width
 export default function ServerHealthDropdown() {
 
   const classes = useStyles(); 
@@ -73,8 +73,9 @@ export default function ServerHealthDropdown() {
 
             </Select>
           </FormControl>
-          <ServerHealthDisplay serverName={server}/>
+
         </div>
+        <ServerHealthDisplay serverName={server}/>
       </Card>
     )
   }

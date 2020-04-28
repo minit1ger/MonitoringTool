@@ -70,9 +70,7 @@ const ServerFailureSummary = props => {
         {...rest}
         className={clsx(classes.root, className)}
       >
-        <CardHeader
-         title="Server Failure Summary" 
-        />
+        <CardHeader title="Server Failure Summary" />
         <Divider />
         <CardContent className={classes.content}>
           <div> 
