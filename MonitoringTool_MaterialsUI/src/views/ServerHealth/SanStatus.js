@@ -1,7 +1,6 @@
-import React, { Component } from "react"; 
+import React from "react"; 
 
 import data from "../../data/sanStatus.json";
-import theme from "../../theme";
 
 import Paper          from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/styles';
@@ -11,7 +10,6 @@ import {
   TableContainer, 
   Table,
   TableBody,
-  TableHead,
   TableRow,
   TableCell,
 
@@ -62,7 +60,11 @@ function returnRowStyle( index )
   return  index % 2 ? classes.row : "";
 }
 
-const SystemOverview = props => {
+/**
+ * SanStatus returns a table of SAN information.
+ * @param {*} props 
+ */
+const SanStatus = props => {
   const { className, ...rest } = props; 
 
   const classes = useStyles(); 
@@ -90,7 +92,7 @@ const SystemOverview = props => {
         <CardContent className={classes.content}>
           <div>
             <TableContainer component={Paper}>
-              <Table className={classes.table} size="small" aria-lable="simple table">
+              <Table className={classes.table} size="small" aria-label="simple table">
                 <TableBody>
                   {returnString}
                 </TableBody>
@@ -103,4 +105,4 @@ const SystemOverview = props => {
   }
 }
 
-export default SystemOverview;
+export default SanStatus;

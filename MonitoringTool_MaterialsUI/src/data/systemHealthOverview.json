@@ -1,0 +1,5 @@
+{
+  "systemStatus" : "Green", 
+  "swStatus": "Red", 
+  "channelStatus": ["BUSY", "IDLE", "IDLE", "IDLE", "IDLE", "FAILED", "IDLE", "OFFLINE"]
+}

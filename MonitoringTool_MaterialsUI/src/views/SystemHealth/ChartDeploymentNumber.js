@@ -3,9 +3,9 @@ import React from 'react';
 //import palette from 'theme/palette'; 
 
 import { makeStyles } from '@material-ui/styles';
-import { Bar, Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
-import { getDates, getData } from './getChartInformation';
+import { getDates, getData, chartOptions } from './getChartInformation';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -39,7 +39,8 @@ const ChartDeploymentNumbers = props => {
   return (
     <div>
       <Line 
-        data={deploymentData} />
+        data={deploymentData} 
+        options={chartOptions} />
     </div>
   );
 };

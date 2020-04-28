@@ -6,6 +6,9 @@ import ChartDeploymentNumber from './ChartDeploymentNumber';
 import ChartServerFailure from './ChartServerFailure';
 import ChartPDRNumbers from './ChartPDRNumbers';
 import ChartDeploymentFailure from './ChartDeploymentFailure';
+import SystemHealthOverview from './SystemHealthOverview';
+import ServerLogs from './ServerLog'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,13 +22,15 @@ const SystemHealth = () => {
   return (
     <div classes={classes.root}>
       <Grid container spacing={3}>
+        <Grid item xs={6}><SystemHealthOverview /></Grid>
+        <Grid item xs={6}><ServerLogs /></Grid>
         <Grid item xs={6}><ChartDeploymentNumber /></Grid>
         
         <Grid item xs={6}><ChartPDRNumbers /></Grid>
         <Grid item xs={6}><ChartServerFailure /></Grid>
         <Grid item xs={6}><ChartDeploymentFailure /></Grid>
       </Grid>
-      
+    
     </div>
   )
 }

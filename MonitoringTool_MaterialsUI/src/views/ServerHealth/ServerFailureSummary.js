@@ -2,9 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 // Stylization Related Imports
-import { makeStyles, colors, Typography } from '@material-ui/styles';
-
-import { spacing } from '@material-ui/system'
+import { makeStyles } from '@material-ui/styles';
 
 import { 
   //Table Related Imports
@@ -25,7 +23,6 @@ import {
 } from '@material-ui/core';
 
 import data from '../../data/serverStates.json'
-import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from 'constants';
 
 
 const useStyles = makeStyles(theme => ({

@@ -3,7 +3,7 @@ import React from 'react';
 //import palette from 'theme/palette'; 
 
 import { makeStyles } from '@material-ui/styles';
-import { Bar, Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 import { getDates, getData } from './getChartInformation';
 
@@ -30,6 +30,10 @@ export const deploymentFailure = {
   ]
 };
 
+/**
+ * Display Deployment Failures
+ * @param {*} props 
+ */
 const ChartDeploymentFailure = props => {
 
   const { className, ...rest } = props;

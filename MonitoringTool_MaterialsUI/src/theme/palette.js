@@ -1,7 +1,6 @@
 import { colors } from '@material-ui/core';
 
 const white = '#FFFFFF';
-const ivory = '#FFFFF0';
 const ghostWhite = '#FAF8FF';
 const black = '#000000';
 
@@ -47,6 +46,12 @@ export default {
     dark: colors.red[900],
     main: colors.red[600],
     light: colors.red[400]
+  },
+  offline: {
+    contrastText: white, 
+    dark: colors.blueGrey[700],
+    main: colors.blueGrey[300],
+    light: colors.blueGrey[100]
   },
   text: {
     primary: colors.blueGrey[900],

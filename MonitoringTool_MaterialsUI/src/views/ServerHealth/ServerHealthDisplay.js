@@ -1,29 +1,20 @@
 import React from 'react'; 
-import clsx from 'clsx'; 
 
 // Stylization Related Imports
-import { makeStyles, colors, Typography } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 
 import Paper from '@material-ui/core/Paper';
 
-import { spacing } from '@material-ui/system'
 
 import { 
   //Table Related Imports
   TableContainer, 
   Table, 
   TableBody, 
-  TableHead, 
   TableRow, 
   TableCell,
 
-  //Card Related Imports
-  Card, 
-  CardHeader,
-  CardContent,
-
-  // Other
-  Divider
+  CardContent
 } from '@material-ui/core';
 
 import data from '../../data/serverStates.json'
@@ -47,19 +38,23 @@ const useStyles = makeStyles( theme => ({
   },
 }));
 
+/**
+ * Returns the Server Health information. 
+ * @param {*} props 
+ * @param serverName - the name of the server to display. 
+ */
 const ServerHealthDisplay = props => {
   const { className, ...param } = props; 
 
   const classes = useStyles(); 
 
-  const serverName = param.serverName; 
 
   if (data)
   {
     console.log("Server Name: " + param.serverName );
     var server = data.filter( ( data) => {
       return data.name === param.serverName; 
-    }).map( (data,index) => {
+    }).map( (data) => {
       console.log("ServerHealthDisplay: " + data);
       return <TableBody>
         <TableRow className={classes.row} key={data.name}>
@@ -96,6 +91,11 @@ const ServerHealthDisplay = props => {
             </TableContainer>
           </div>
         </CardContent>
+    );
+  } else {
+    //Return ERROR information
+    return (
+      <div><font color="red">ERROR loading Data.</font></div> 
     );
   }
 }

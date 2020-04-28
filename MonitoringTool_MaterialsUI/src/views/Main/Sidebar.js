@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import { Divider, Drawer } from '@material-ui/core';
+import { Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import SettingsSystemDaydream from '@material-ui/icons/SettingsSystemDaydream';
 import Computer from '@material-ui/icons/Computer';
@@ -10,17 +10,8 @@ import Email from '@material-ui/icons/Email';
 import Waves from '@material-ui/icons/Waves';
 
 
-/* import PeopleIcon from '@material-ui/icons/People';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import TextFieldsIcon from '@material-ui/icons/TextFields';
-import ImageIcon from '@material-ui/icons/Image';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import SettingsIcon from '@material-ui/icons/Settings';
-import LockOpenIcon from '@material-ui/icons/LockOpen'; */
-
 import SidebarNav from './SidebarNav';
 
-//import { Profile, SidebarNav, UpgradePlan } from './components';
 
 const useStyles = makeStyles(theme => ({
   drawer: {
@@ -45,6 +36,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+/**
+ * Displays the side bar for all pages.
+ * @param {*} props 
+ */
 const Sidebar = props => {
   const { open, variant, onClose, className, ...rest } = props;
 

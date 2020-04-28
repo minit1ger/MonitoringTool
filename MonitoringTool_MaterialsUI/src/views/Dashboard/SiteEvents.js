@@ -1,16 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Typography, colors} from '@material-ui/core'
-import PropTypes from 'prop-types';
+
 import Paper from '@material-ui/core/Paper';
-import data from '../../data/systemOverview.json'
 
 import dataArray from "../../data/siteEvent.json";
 
 
 //Table Related Imports
 import { TableContainer, Table, TableBody, TableHead, TableRow, TableCell} from '@material-ui/core';
-import { fontSize } from '@material-ui/system';
 
 /**
  * TODO: for table related styles and methods, maybe look into 
@@ -20,6 +18,7 @@ const useStyles = makeStyles( theme => ({
 
    table: {
       minWidth: 150,
+      height: 300
    },
    head: {
      backgroundColor: theme.palette.table.header,
@@ -27,7 +26,9 @@ const useStyles = makeStyles( theme => ({
      fontSize: '16px'
    },
    row: {
-     backgroundColor: theme.palette.table.rowColor
+     backgroundColor: theme.palette.table.rowColor,
+   },
+   offrow:{
    },
    cell: {
       color: colors.blueGrey[800],
@@ -86,7 +87,7 @@ function createRows( locationData ){
 function returnRowStyle( index )
 {
   const classes = useStyles();
-  return  index % 2 ? classes.row : "";
+  return  index % 2 ? classes.row : classes.offrow;
 }
 
 const SiteEvents = props => {

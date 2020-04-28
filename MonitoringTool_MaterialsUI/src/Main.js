@@ -7,8 +7,6 @@ import { useMediaQuery } from '@material-ui/core';
 import Sidebar from './views/Main/Sidebar';
 import Topbar from './views/Main/Topbar';
 import Footer from './views/Main/Footer';
-import color from 'material-ui-core/colors/amber';
-
 
 const useStyles = makeStyles(theme => ({
   root: {

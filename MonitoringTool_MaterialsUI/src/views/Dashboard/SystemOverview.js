@@ -1,6 +1,5 @@
 import React          from 'react';
 import { makeStyles } from '@material-ui/styles';
-import PropTypes      from 'prop-types';
 import Paper          from '@material-ui/core/Paper';
 import { Typography, colors, Card } from '@material-ui/core';
 import data           from '../../data/systemOverview.json'
@@ -19,8 +18,6 @@ import {
   Divider
 } from '@material-ui/core';
 
-import { spacing } from '@material-ui/system';
-import clsx from 'clsx';
 
 /**
  * TODO: Could not change the padding OTHER than setting it to NONE.  
